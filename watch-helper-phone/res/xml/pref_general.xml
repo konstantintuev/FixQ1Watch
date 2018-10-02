@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/pref_title_social_recommendations" android:key="@string/pref_connect_checkbox" android:widgetLayout="@layout/my_checkbox" android:defaultValue="false" android:summaryOn="@string/pref_description_connect_on" android:summaryOff="@string/pref_description_connect_off" />
+    <PreferenceCategory android:title="@string/string_sms_and_phone" />
+    <CheckBoxPreference android:title="@string/pref_title_read_sms" android:key="@string/pref_read_sms_checkbox" android:summary="@string/pref_description_read_sms" android:widgetLayout="@layout/my_checkbox" android:dependency="@string/pref_connect_checkbox" android:defaultValue="@bool/EnableSmsRead" />
+    <CheckBoxPreference android:title="@string/pref_title_miss_call" android:key="@string/pref_miss_call_checkbox" android:summary="@string/pref_description_miss_call" android:widgetLayout="@layout/my_checkbox" android:dependency="@string/pref_connect_checkbox" android:defaultValue="@bool/EnableCallMissed" />
+    <CheckBoxPreference android:title="@string/pref_title_incomming_call" android:key="@string/pref_incomming_call_checkbox" android:summary="@string/pref_description_incomming_call" android:widgetLayout="@layout/my_checkbox" android:dependency="@string/pref_connect_checkbox" android:defaultValue="@bool/EnableIncommingCall" />
+    <PreferenceCategory android:title="@string/string_app_notification" />
+    <CheckBoxPreference android:title="@string/pref_title_app_notification" android:key="@string/pref_notification_checkbox" android:summary="@string/pref_description_app_notification" android:widgetLayout="@layout/my_checkbox" android:dependency="@string/pref_connect_checkbox" android:defaultValue="@bool/EnableNotification" />
+    <Preference android:title="@string/string_select_app" android:key="@string/string_select_app" android:summary="@string/string_select_app_summary" android:dependency="@string/pref_notification_checkbox">
+        <intent android:targetPackage="com.android.BluetoothSocketTest" android:targetClass="com.android.BluetoothSocketTest.AppSelectActivity" />
+    </Preference>
+    <PreferenceCategory android:title="@string/string_other_feather" />
+    <Preference android:title="@string/pref_title_fmp" android:key="@string/pref_fmp_checkbox" android:summary="@string/pref_description_fmp" android:dependency="@string/pref_connect_checkbox" android:defaultValue="@bool/EnableFmp" />
+    <Preference android:title="@string/pref_title_transfer_file" android:key="@string/pref_transfer_file" android:summary="@string/pref_description_transfer_file" android:dependency="@string/pref_connect_checkbox" />
+    <Preference android:title="@string/pref_title_app_list" android:key="@string/pref_app_list" android:summary="@string/pref_description_app_list" android:dependency="@string/pref_connect_checkbox" />
+    <PreferenceCategory android:title="@string/pref_title_update" />
+    <CheckBoxPreference android:title="@string/pref_title_update" android:key="@string/pref_update_checkbox" android:widgetLayout="@layout/my_checkbox" android:defaultValue="@bool/autoUpdate" android:summaryOn="@string/pref_update_checkbox_on" android:summaryOff="@string/pref_update_checkbox_off" />
+</PreferenceScreen>

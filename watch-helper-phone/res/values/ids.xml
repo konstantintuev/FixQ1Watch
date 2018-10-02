@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="app_icon">false</item>
+    <item type="id" name="checkbox">false</item>
+    <item type="id" name="app_title">false</item>
+    <item type="id" name="title_left_text">false</item>
+    <item type="id" name="title_right_text">false</item>
+    <item type="id" name="title_paired_devices">false</item>
+    <item type="id" name="paired_devices">false</item>
+    <item type="id" name="icon">false</item>
+    <item type="id" name="app_name">false</item>
+    <item type="id" name="delete">false</item>
+    <item type="id" name="in">false</item>
+    <item type="id" name="button_call">false</item>
+    <item type="id" name="button_hangup">false</item>
+    <item type="id" name="edit_text_out">false</item>
+    <item type="id" name="button_send">false</item>
+    <item type="id" name="read">false</item>
+    <item type="id" name="sendBn">false</item>
+    <item type="id" name="person_btn_layout">false</item>
+    <item type="id" name="select_all_person">false</item>
+    <item type="id" name="save_person_app">false</item>
+    <item type="id" name="personList">false</item>
+    <item type="id" name="container">false</item>
+    <item type="id" name="viewpager">false</item>
+    <item type="id" name="pagertab">false</item>
+    <item type="id" name="system_btn_layout">false</item>
+    <item type="id" name="select_all_system">false</item>
+    <item type="id" name="save_system_app">false</item>
+    <item type="id" name="systemList">false</item>
+    <item type="id" name="scan">false</item>
+    <item type="id" name="check_update">false</item>
+</resources>

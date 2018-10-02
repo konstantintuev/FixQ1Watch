@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+    <style name="CustomActivityTheme" parent="@android:style/Theme.Holo">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:actionBarStyle">@style/ZZZActionBar</item>
+    </style>
+    <style name="ZZZActionBar" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">#ff005063</item>
+        <item name="android:height">80.0dip</item>
+        <item name="android:titleTextStyle">@style/Theme.ActionBar.TitleTextStyle</item>
+        <item name="android:backgroundStacked">#ff005063</item>
+        <item name="android:backgroundSplit">#ff005063</item>
+    </style>
+    <style name="Theme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">28.0sp</item>
+        <item name="android:textColor">@android:color/holo_blue_bright</item>
+    </style>
+    <style name="customTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+    </style>
+    <style name="CustomActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:displayOptions">homeAsUp|showTitle</item>
+    </style>
+</resources>

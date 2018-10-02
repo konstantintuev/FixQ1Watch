@@ -1,0 +1,148 @@
+Manifest-Version: 1.0
+Created-By: 1.7.0_91 (Oracle Corporation)
+
+Name: res/raw/bt_prxr_link_loss_alert.ogg
+SHA1-Digest: 5DIlYcXKLFctCM0eQ1+C7ZWIIDE=
+
+Name: res/layout/device_list.xml
+SHA1-Digest: jB4980B1PXfxNMuClLD2TjONrw0=
+
+Name: res/raw/zeta.ogg
+SHA1-Digest: vNKdJVdJ26xuYppJBzSipAuWoIU=
+
+Name: res/drawable-hdpi-v4/app_icon.png
+SHA1-Digest: YuyrRyiw6rijvXtlvZ/IfiTYTes=
+
+Name: res/drawable-hdpi-v4/btn_check_on_holo_dark.png
+SHA1-Digest: P+UNsX2QJygjEwGKyvyG/VMionU=
+
+Name: res/drawable-mdpi-v4/icon.png
+SHA1-Digest: 7Ft/Rirt+l/JRX2KjDREScdbCZk=
+
+Name: res/layout/message.xml
+SHA1-Digest: ihqOBz8ZIEqEmrf6/Y6Oh6q1Lns=
+
+Name: res/layout/app_info_item.xml
+SHA1-Digest: 7BFwUzz55wOhhNiFNiYvuTqdG2A=
+
+Name: res/layout/select_app.xml
+SHA1-Digest: 7pASBdr8ugqPGpuvPftOTvqYYlM=
+
+Name: resources.arsc
+SHA1-Digest: 4enLnTwlpEFvnFV50zu6MR/86fU=
+
+Name: res/layout/device_name.xml
+SHA1-Digest: +mi4wtPxE9hEG/odZEsyY6uBpKY=
+
+Name: res/layout/pbap_test_layout.xml
+SHA1-Digest: NdCcqMR9jZTyCwKczpa7lMlP7Us=
+
+Name: res/drawable/btn_check_holo_dark.xml
+SHA1-Digest: kcCmywF/D+YtEpWr+xOfbzpr0sw=
+
+Name: res/layout/custom_title.xml
+SHA1-Digest: AYG9i17FtpSuxZTmXauP06+rAmI=
+
+Name: res/drawable-mdpi-v4/app_icon.png
+SHA1-Digest: YuyrRyiw6rijvXtlvZ/IfiTYTes=
+
+Name: AndroidManifest.xml
+SHA1-Digest: tT1KUCTx1z+BbxGpY63x4457IOk=
+
+Name: res/xml/pref_notification.xml
+SHA1-Digest: d4QajL8sgvX7y5qH4nRZO4DGGmU=
+
+Name: res/layout/system_app.xml
+SHA1-Digest: 5mfMIlp1avjGCeHiioxMW2blUsw=
+
+Name: res/drawable-hdpi-v4/btn_check_on_pressed_holo_dark.png
+SHA1-Digest: m21Np1SM2BFCcsvtMq62roC5DNs=
+
+Name: res/layout-v17/list_item_icon_text.xml
+SHA1-Digest: dmhiPg4uPPfOKolLRjylkoqzNsw=
+
+Name: res/drawable-hdpi-v4/btn_check_off_disabled_holo_dark.png
+SHA1-Digest: UAuQWsvFMRv61psPC9JZy6Gi4cw=
+
+Name: res/drawable-hdpi-v4/btn_check_off_disable_focused_holo_dark.png
+SHA1-Digest: Kq+aF4prkPsaQ6CsqnA10basgx0=
+
+Name: res/drawable-hdpi-v4/btn_check_on_focused_holo_dark.png
+SHA1-Digest: zVks/qMXf6Xco8vQTEZxQ/BLFC8=
+
+Name: res/drawable/checkbox_checked_style.xml
+SHA1-Digest: 9JFW4oTG16dS1jsW64gmmIiuyLA=
+
+Name: res/drawable-hdpi-v4/btn_check_off_normal_holo_dark.png
+SHA1-Digest: vxG0Cc5FdctqW3PklRv6Vtqco0o=
+
+Name: res/drawable-hdpi-v4/btn_check_off_disable_holo_dark.png
+SHA1-Digest: Kq+aF4prkPsaQ6CsqnA10basgx0=
+
+Name: res/drawable-hdpi-v4/btn_check_on_disabled_focused_holo_dark.png
+SHA1-Digest: rd9jOyzi3xsc8W95o5JmtA1vwAE=
+
+Name: res/drawable-hdpi-v4/btn_check_off_focused_holo_dark.png
+SHA1-Digest: zqc63H6V1XConex6DSFraqEAT70=
+
+Name: res/drawable-hdpi-v4/icon.png
+SHA1-Digest: Vj/qhxk8ic8FE0/kT6E3vgRJ4mE=
+
+Name: res/xml/pref_general.xml
+SHA1-Digest: KgTiGwxfUlAXVfnX2fEnv8ysRG0=
+
+Name: res/drawable-hdpi-v4/btn_check_on_disabled_holo_dark.png
+SHA1-Digest: qkjjN9R2PEqTsYT0R0v4oUJLL7o=
+
+Name: res/drawable-hdpi-v4/btn_check_off_pressed_holo_dark.png
+SHA1-Digest: IPQvrpzm7OE6Vyz92SzNGGCS0Jo=
+
+Name: res/layout/my_checkbox.xml
+SHA1-Digest: qnv9L14ZXZL5a4EqF7q92gKGvQE=
+
+Name: res/layout/list_item_icon_text.xml
+SHA1-Digest: vGIm6cNxbkYfrTl3ZMoblfZuer8=
+
+Name: res/layout/person_app.xml
+SHA1-Digest: fhN+vqDIPZ2T1vyHE0F0GT5qi8I=
+
+Name: res/xml/pref_data_sync.xml
+SHA1-Digest: U11CYihupv/GhoK7+FUNycBnLB8=
+
+Name: res/menu/option_menu.xml
+SHA1-Digest: vCDUFmsP+Pw5kbi8vfaJdCsMrrk=
+
+Name: classes.dex
+SHA1-Digest: X/HjZ7zmQxKMEBXaEXa1cUQGQrQ=
+
+Name: res/drawable-hdpi-v4/btn_check_off_disabled_focused_holo_dark.pn
+ g
+SHA1-Digest: 1/5896VKbt4dTGEvMATNIHB3/A0=
+
+Name: res/drawable-ldpi-v4/app_icon.png
+SHA1-Digest: YuyrRyiw6rijvXtlvZ/IfiTYTes=
+
+Name: res/layout/main.xml
+SHA1-Digest: pFP2KsyWvnFFGJnRsyGGYuQLCMo=
+
+Name: res/layout-v17/app_info_item.xml
+SHA1-Digest: rhMwUuvaVGqYcgQl7pDljWLmMXQ=
+
+Name: res/xml/pref_headers.xml
+SHA1-Digest: 0CNtr7csF4LnTNd34KG8LLGMfzI=
+
+Name: res/layout/action_bar_menu.xml
+SHA1-Digest: yFY3AcFYOXB80UPukaybPH3ALsg=
+
+Name: res/drawable/imagebutton_selector.xml
+SHA1-Digest: KDWabbXF+v22zOaskURexTPEWto=
+
+Name: res/drawable-hdpi-v4/btn_check_off_holo_dark.png
+SHA1-Digest: FTABpcIkl/pnW8UeJj5Obzc+iV4=
+
+Name: res/drawable-ldpi-v4/icon.png
+SHA1-Digest: i7vxaosoiS+9HzKB7ZgIsXMYRLY=
+
+Name: res/raw/bt_prxr_path_loss_alert.ogg
+SHA1-Digest: tyeJsmvjmrcQcal3Ex/JIhCgSC0=
+

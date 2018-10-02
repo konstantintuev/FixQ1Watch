@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="EnableSmsMissed">false</bool>
+    <bool name="EnableSmsRead">true</bool>
+    <bool name="EnableCallMissed">true</bool>
+    <bool name="EnableIncommingCall">true</bool>
+    <bool name="EnableNotification">false</bool>
+    <bool name="EnableFmp">true</bool>
+    <bool name="autoUpdate">true</bool>
+</resources>

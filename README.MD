@@ -24,7 +24,7 @@ You need to install XPosed to the watch.
 I modified the Phone 'Watch Helper' apk so that it's receiving info like 'toggle pause' or 'next song' from the watch and forwarding it to my App.
 I detached completely the Music Widget on the Watch and it's updated using a Root command from the 'Watch Assistant' app.
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License (the best license ever) - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 

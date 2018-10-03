@@ -20,10 +20,13 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.DisplayMetrics;
+import android.util.Pair;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.RemoteViews;
 import android.widget.TextView;
@@ -36,6 +39,11 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 import de.robv.android.xposed.IXposedHookInitPackageResources;
@@ -74,8 +82,8 @@ public class XposedFix implements IXposedHookLoadPackage, IXposedHookInitPackage
                 int dip45 = convertDipToPixels(55);
                 int dip55 = convertDipToPixels(70);
 
-                int dip65 = convertDipToPixels(75);
-                int dip50 = convertDipToPixels(60);
+                int dip65 = convertDipToPixels(85);
+                int dip50 = convertDipToPixels(70);
 
                 View prev = liparam.view.findViewById(
                         liparam.res.getIdentifier("control_prev", "id", "com.android.music"));
@@ -173,16 +181,54 @@ public class XposedFix implements IXposedHookLoadPackage, IXposedHookInitPackage
                                                 }
                                             }
                                             if (!isDownInTitleRestDown && motionEvent.getY() - downY > ((float) 100)) {
-                                                new AlertDialog.Builder(thisOBJ.getContext())
-                                                        .setTitle("Class Timetable")
-                                                        .setView(Classes.getClassTimetables(thisOBJ.getContext()))
+                                                final Pair<Integer, ListView> lv = Classes.getClassTimetables(thisOBJ.getContext());
+                                                long diffMins = -1;
+                                                if (lv.first >= 0) {
+                                                    String end = Classes.classTimetables[lv.first].end;
+
+                                                    Date time2 = null;
+                                                    try {
+                                                        time2 = new SimpleDateFormat("HH.mm", Locale.GERMANY).parse(end);
+                                                    } catch (ParseException e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                    Calendar calendar2 = Calendar.getInstance();
+                                                    calendar2.setTime(time2);
+                                                    calendar2.set(10, 5, 5);
+
+                                                    Calendar calendar3 = Calendar.getInstance();
+                                                    calendar3.set(10, 5, 5);
+
+                                                    diffMins = (calendar2.getTime().getTime() - calendar3.getTime().getTime()) / (1000 * 60);
+                                                    diffMins++;
+                                                }
+
+
+                                                final AlertDialog alertDialog = new AlertDialog.Builder(thisOBJ.getContext())
+                                                        .setTitle((diffMins > 0) ? "Left "+diffMins+" min"+ (diffMins == 1 ? "" : "s") : "Class Timetable")
+                                                        .setView(lv.second)
                                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                                             @Override
                                                             public void onClick(DialogInterface dialog, int which) {
 
                                                             }
                                                         })
-                                                        .show();
+                                                        .create();
+                                                if (lv.first >= 0) {
+                                                    alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                                                        @Override
+                                                        public void onShow(DialogInterface dialog) {
+                                                            lv.second.smoothScrollToPosition(lv.first);
+                                                        }
+                                                    });
+                                                }
+                                                lv.second.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                                    @Override
+                                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                                        alertDialog.cancel();
+                                                    }
+                                                });
+                                                alertDialog.show();
                                             }
                                         }
                                         break;
@@ -246,6 +292,7 @@ public class XposedFix implements IXposedHookLoadPackage, IXposedHookInitPackage
                         });
                 findAndHookMethod("com.android.BluetoothSocketTest.NotifyService", lpparam.classLoader,
                         "a", int.class, String.class, String.class, int.class, Bitmap.class, new XC_MethodHook() {
+                            @SuppressLint("ResourceType")
                             @Override
                             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                                 System.out.println("a.beforeHookedMethod(): param=" + param);
@@ -342,6 +389,7 @@ public class XposedFix implements IXposedHookLoadPackage, IXposedHookInitPackage
                         });
                 findAndHookMethod("android.app.Dialog", lpparam.classLoader,
                         "show", new XC_MethodHook() {
+                            @SuppressLint("ResourceType")
                             @Override
                             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                                 Dialog th = (Dialog) param.thisObject;

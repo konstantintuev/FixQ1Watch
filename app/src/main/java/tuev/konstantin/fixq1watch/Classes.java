@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,19 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Classes {
-    static boolean isBetweenTimes(ClassTimetable classTimetable) {
+    static ClassTimetable[] classTimetables;
+    static {
+        classTimetables = new ClassTimetable[7];
+        classTimetables[0] = new ClassTimetable(1, "7.30", "8.10");
+        classTimetables[1] = new ClassTimetable(2, "8.15", "8.55");
+        classTimetables[2] = new ClassTimetable(3, "9.15", "9.55");
+        classTimetables[3] = new ClassTimetable(4, "10.00", "10.40");
+        classTimetables[4] = new ClassTimetable(5, "10.50", "11.30");
+        classTimetables[5] = new ClassTimetable(6, "11.40", "12.20");
+        classTimetables[6] = new ClassTimetable(7, "12.30", "13.10");
+    }
+
+    private static boolean isBetweenTimes(ClassTimetable classTimetable) {
         try {
             Date time1 = new SimpleDateFormat("HH.mm", Locale.GERMANY).parse(classTimetable.start);
             Calendar calendar1 = Calendar.getInstance();
@@ -48,28 +61,24 @@ public class Classes {
         int id;
         String start;
         String end;
+
+        @Override
+        public String toString() {
+            return id+". "+start+" - "+end;
+        }
+
         ClassTimetable(int id, String start, String end) {
             this.id = id;
             this.start = start;
             this.end = end;
+
         }
     }
 
-    static View getClassTimetables(Context context) {
-        ClassTimetable[] classTimetables = new ClassTimetable[7];
-        classTimetables[0] = new ClassTimetable(1, "7.30", "8.10");
-        classTimetables[1] = new ClassTimetable(2, "8.15", "8.55");
-        classTimetables[2] = new ClassTimetable(3, "9.15", "9.55");
-        classTimetables[3] = new ClassTimetable(4, "10.00", "10.40");
-        classTimetables[4] = new ClassTimetable(5, "10.50", "11.30");
-        classTimetables[5] = new ClassTimetable(6, "11.40", "12.20");
-        classTimetables[6] = new ClassTimetable(7, "12.30", "13.10");
-
+    static Pair<Integer, ListView> getClassTimetables(Context context) {
         int idToColor = -5;
 
-        String[] classTimetablesString = new String[7];
         for (ClassTimetable classTime:classTimetables) {
-            classTimetablesString[classTime.id-1] = classTime.id+". "+classTime.start+" - "+classTime.end;
             if (idToColor == -5 && isBetweenTimes(classTime)) {
                 idToColor = classTime.id-1;
             }
@@ -78,7 +87,7 @@ public class Classes {
         ListView listView = new ListView(context);
         listView.setBackgroundColor(Color.WHITE);
         final int finalIdToColor = idToColor;
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, classTimetablesString) {
+        ArrayAdapter<ClassTimetable> itemsAdapter = new ArrayAdapter<ClassTimetable>(context, android.R.layout.simple_list_item_1, classTimetables) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -92,6 +101,6 @@ public class Classes {
             }
         };
         listView.setAdapter(itemsAdapter);
-        return listView;
+        return new Pair<>(idToColor, listView);
     }
 }
